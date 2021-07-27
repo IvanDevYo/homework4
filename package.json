@@ -2,10 +2,10 @@
   "name": "homework4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "tree.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tree": "tree.js"
+    "tree": "node tree.js"
   },
   "keywords": [],
   "author": "",
