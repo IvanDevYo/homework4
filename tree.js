@@ -1,16 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const args = JSON.parse(process.env.npm_config_argv)
-let pathInputVariable = '.'
-
-args.original.forEach(param => {
-    if (param.includes('path')) {
-        const startIndex = param.indexOf('=') + 1
-        const endIndex = param.length
-        pathInputVariable = param.slice(startIndex, endIndex);
-    }
-})
+let pathInputVariable = process.argv[2] || '.'
 
 const normalizedPath = path.normalize(pathInputVariable)
 let dirs = [normalizedPath]
